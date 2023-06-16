@@ -2,13 +2,20 @@
   "name": "npm",
   "version": "1.0.0",
   "description": "Belaja NodeJS NPM",
-  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./write": "./write.js"
+  },
   "homepage": "https://www.programmerzamannow.com/",
   "repository": {
     "type": "git",
     "url": "https://github.com/yuliantocode93/PZN-NPM.git"
   },
   "scripts": {
+    "prestart": "echo 'Before Application Start'",
+    "start": "node index.js",
+    "poststart": "echo 'After Application Start'",
+    "run": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -17,5 +24,15 @@
     "NPM"
   ],
   "author": "Yulianto",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module",
+  "Dependencies": {
+    "lodash": "4.17.21",
+    "nodejs-npm-library-julianto": "1.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "nodejs-npm-library-julianto": "^1.2.0"
+  }
 }
